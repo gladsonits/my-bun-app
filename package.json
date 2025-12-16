@@ -1,25 +1,28 @@
 {
-   "name": "my-bun-app",
-   "module": "index.ts",
-   "type": "module",
-   "private": true,
-   "devDependencies": {
-      "@types/bun": "latest",
-      "@types/node": "^25.0.2",
-      "prettier": "^3.7.4"
-   },
-   "peerDependencies": {
-      "typescript": "^5"
-   },
-   "workspaces": [
-      "packages/*"
-   ],
-   "dependencies": {
-      "concurrently": "9.2.1"
-   },
-   "scripts": {
-      "dev": "bun run --watch index.ts",
-      "start": "bun run index.ts",
-      "format": "prettier --write ."
-   }
+  "name": "my-bun-app",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.0.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "concurrently": "9.2.1"
+  },
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  }
 }
