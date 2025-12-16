@@ -1,21 +1,21 @@
-import express from "express";
-import type { Request, Response } from "express";
-import dotenv from "dotenv";
+import express from 'express';
+import type { Request, Response } from 'express';
+import dotenv from 'dotenv';
 const app = express();
 
 dotenv.config(); // Load environment variables from .env file
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
+app.get('/', (req: Request, res: Response) => {
+   res.send('Hello World!');
 });
 
-app.get("/api/hello", (req: Request, res: Response) => {
-  res.json({ message: "Hello World!" });
+app.get('/api/hello', (req: Request, res: Response) => {
+   res.json({ message: 'Hello World!' });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port http://localhost:${PORT}`);
+   console.log(`Server is running on port http://localhost:${PORT}`);
 });
 export default app;
